@@ -1,4 +1,5 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
+import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
+import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
@@ -92,7 +93,7 @@ const Slider = () => {
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
+        <ChevronLeftOutlinedIcon />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -109,7 +110,7 @@ const Slider = () => {
         ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlined />
+        <ChevronRightOutlinedIcon />
       </Arrow>
     </Container>
   );

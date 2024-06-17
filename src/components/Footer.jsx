@@ -1,12 +1,11 @@
-import {
-    Facebook,
-    Instagram,
-    MailOutline,
-    Phone,
-    Pinterest,
-    Room,
-    Twitter,
-  } from "@material-ui/icons";
+
+  import FacebookIcon from '@mui/icons-material/Facebook';
+  import InstagramIcon from '@mui/icons-material/Instagram';
+  import MailOutlineIcon from '@mui/icons-material/MailOutline';
+  import PhoneIcon from '@mui/icons-material/Phone';
+  import PinterestIcon from '@mui/icons-material/Pinterest';
+  import TvOutlinedIcon from '@mui/icons-material/TvOutlined';
+  import XIcon from '@mui/icons-material/X';
   import styled from "styled-components";
   import { mobile } from "../responsive";
   
@@ -96,16 +95,16 @@ import {
           </Desc>
           <SocialContainer>
             <SocialIcon color="3B5999">
-              <Facebook />
+              <FacebookIcon />
             </SocialIcon>
             <SocialIcon color="E4405F">
-              <Instagram />
+              <InstagramIcon />
             </SocialIcon>
             <SocialIcon color="55ACEE">
-              <Twitter />
+              <XIcon />
             </SocialIcon>
             <SocialIcon color="E60023">
-              <Pinterest />
+              <PinterestIcon />
             </SocialIcon>
           </SocialContainer>
         </Left>
@@ -127,13 +126,13 @@ import {
         <Right>
           <Title>Contact</Title>
           <ContactItem>
-            <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+            <TvOutlinedIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
           </ContactItem>
           <ContactItem>
-            <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+            <PhoneIcon style={{marginRight:"10px"}}/> +1 234 56 78
           </ContactItem>
           <ContactItem>
-            <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+            <MailOutlineIcon style={{marginRight:"10px"}} /> contact@lama.dev
           </ContactItem>
           <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
         </Right>
