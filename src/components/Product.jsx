@@ -1,10 +1,10 @@
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import styled from "styled-components";
+import {Link} from 'react-router-dom';
 
-  import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-  import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-  import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-  import styled from "styled-components";
-  
-  const Info = styled.div`
+const Info = styled.div`
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -19,8 +19,8 @@
     transition: all 0.5s ease;
     cursor: pointer;
   `;
-  
-  const Container = styled.div`
+
+const Container = styled.div`
     flex: 1;
     margin: 5px;
     min-width: 280px;
@@ -35,21 +35,21 @@
       opacity: 1;
     }
   `;
-  
-  const Circle = styled.div`
+
+const Circle = styled.div`
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
   `;
-  
-  const Image = styled.img`
+
+const Image = styled.img`
     height: 75%;
     z-index: 2;
   `;
-  
-  const Icon = styled.div`
+
+const Icon = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -64,25 +64,27 @@
       transform: scale(1.1);
     }
   `;
-  
-  const Product = ({ item }) => {
-    return (
-      <Container>
-        <Circle />
-        <Image src={item.img} />
-        <Info>
-          <Icon>
-            <ShoppingCartOutlinedIcon />
-          </Icon>
-          <Icon>
+
+const Product = ({ item }) => {
+  return (
+    <Container>
+      <Circle />
+      <Image src={item.img} />
+      <Info>
+        <Icon>
+          <ShoppingCartOutlinedIcon />
+        </Icon>
+        <Icon>
+          <Link to={`/product/${item._id}`}>
             <SearchOutlinedIcon />
-          </Icon>
-          <Icon>
-            <FavoriteBorderOutlinedIcon />
-          </Icon>
-        </Info>
-      </Container>
-    );
-  };
-  
-  export default Product;
+          </Link>
+        </Icon>
+        <Icon>
+          <FavoriteBorderOutlinedIcon />
+        </Icon>
+      </Info>
+    </Container>
+  );
+};
+
+export default Product;
